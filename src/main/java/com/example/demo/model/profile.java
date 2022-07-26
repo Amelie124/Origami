@@ -13,6 +13,8 @@ public class profile {
 
     private String nom;
     private String prenom;
+    private String telephone;
+    private String email;
 
     public profile() {
     }
@@ -41,9 +43,28 @@ public class profile {
         this.prenom = prenom;
     }
 
-    public profile(Long id, String nom, String prenom) {
+    public String getTelephone() {
+        return telephone;
+    }
+
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public profile(Long id, String nom, String prenom, String telephone, String email) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
+        this.telephone=telephone;
+        this.email=email;
+
     }
 }

@@ -21,4 +21,11 @@ public class Personne {
 
     @Column (name="prenomUtilisateur")
     private String prenom;
+    @Column (name="telephoneUtilisateur")
+    private String telephone;
+    @Column(name="emailUtilisateur")
+    private String email;
+    @Column (name="adresseUtilisateur")
+    private String adresse;
+
 }
