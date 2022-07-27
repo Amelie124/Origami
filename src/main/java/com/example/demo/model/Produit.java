@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -19,6 +20,10 @@ public class Produit {
     private Long id;
     @Column (name= "nomProduit")
     private String nom;
+    @Column
+    private Double prixProduit;
+    @Column
+    private Date dateCreation;
     @ManyToOne
     private Categorie categorie;
 }

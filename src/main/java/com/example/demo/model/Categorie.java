@@ -19,9 +19,7 @@ public class Categorie {
     @Column (name="nomCategorie")
     private String nom;
 
-    public Categorie(String nom) {
-        this.nom = nom;
-    }
+
 
     @Override
     public String toString() {
