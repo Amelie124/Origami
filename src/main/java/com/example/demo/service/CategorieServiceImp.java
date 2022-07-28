@@ -3,9 +3,10 @@ package com.example.demo.service;
 import com.example.demo.DAO.CategorieDAO;
 import com.example.demo.model.Categorie;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
 public class CategorieServiceImp implements CategorieService {
 
     @Autowired
