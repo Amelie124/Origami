@@ -10,15 +10,22 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="personne")
-public class Personne {
+@Table(name="categorie")
+public class Categorie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column (name="idPersonne")
+    @Column (name="idCategorie")
     private Long id;
-    @Column (name="nomUtilisateur")
+    @Column (name="nomCategorie")
     private String nom;
 
-    @Column (name="prenomUtilisateur")
-    private String prenom;
+
+
+    @Override
+    public String toString() {
+        return "Categorie{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                '}';
+    }
 }
