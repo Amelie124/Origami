@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,12 +10,10 @@
 </head>
 <body>
 <h1>Bonjour</h1>
-<form action="saveCategorie" method="post">
-<pre>
-nom : <input type="text" name="nomCategorie">
-<input type="submit" value="ajouter">
+<form th:action="@{'/saveCategorie'}" th:object="${categorie}" method="post">
 
-</pre>
+nom : <input type="text" name="nom">
+    <button  type="submit">Ajouter</button>
 </form>
 
 

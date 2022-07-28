@@ -7,23 +7,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class CategorieController {
 
     @Autowired
     CategorieService categorieService;
-    @RequestMapping("/showCreate")
+    @RequestMapping(value ="/showCreate",method = RequestMethod.GET )
     public String showCreate()
     {
         return "createCategorie";
     }
-    @RequestMapping("/saveCategorie")
-    public String saveCategorie(@ModelAttribute("categorie") Categorie categorie,
-                               ModelMap modelMap)
+
+
+    @RequestMapping(value ="/saveCategorie",method = RequestMethod.POST)
+    public String saveCategorie(@ModelAttribute Categorie categorie)
     {
 
-        Categorie saveCategorie = categorieService.saveCategorie(categorie);
+         categorieService.saveCategorie(categorie);
 
         return "createCategorie";
     }
