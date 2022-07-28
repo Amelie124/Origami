@@ -18,14 +18,13 @@ public class Categorie {
     private Long id;
     @Column (name="nomCategorie")
     private String nom;
+    @Column(name="prenomCategorie")
+    private String prenom;
+    @Column(name="telCategorie")
+    private String telephone;
+    @Column(name="emailCategorie")
+    private String email;
 
 
 
-    @Override
-    public String toString() {
-        return "Categorie{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                '}';
-    }
 }
