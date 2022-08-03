@@ -1,21 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Ajouter une figure</title>
 </head>
 <body>
-<h1>Bonjour</h1>
-<form th:action="@{'/saveCategorie'}" th:object="${categorie}" method="post">
+<h1>Ajouter une figure</h1>
+<form th:action="@{'/saveFigure'}" th:object="${figure}" method="post">
 
-nom : <input type="text" name="nom">
-    prenom : <input type="text" name="prenom">
-    telephone : <input type="text" name="telephone">
-    email : <input type="text" name="email">
+    nom : <input type="text" name="nom">
     <button  type="submit">Ajouter</button>
 </form>
 

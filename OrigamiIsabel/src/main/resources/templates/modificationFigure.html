@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modification</title>
+</head>
+<body>
+<h1>Modifier une figure</h1>
+<form th:action="@{'/saveFigure'}" th:object="${figure}" method="post">
+    <input type="text" name="id" th:value ="${list.id}">
+    nom : <input type="text" name="nom" th:value ="${list.nom}">
+    <button  type="submit">Ajouter</button>
+</form>
+</body>
+</html>
